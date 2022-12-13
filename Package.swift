@@ -1,9 +1,12 @@
-// swift-tools-version:4.1
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
 let package = Package(
     name: "libPhoneNumber",
+    platforms: [
+        .iOS(.v9),
+    ],
     products: [
         .library(
             name: "libPhoneNumber",
@@ -18,19 +21,9 @@ let package = Package(
             publicHeadersPath: ".",
             cSettings: [
                 .headerSearchPath("Internal")
-            ]
-        ),
-        .testTarget(
-            name: "libPhoneNumberTests",
-            dependencies: ["libPhoneNumber"],
-            path: "libPhoneNumberTests",
-            sources: [
-                "NBAsYouTypeFormatterTest.m",
-                "NBPhoneNumberParsingPerfTest.m",
-                "NBPhoneNumberUtil+ShortNumberTestHelper.h",
-                "NBPhoneNumberUtil+ShortNumberTestHelper.m",
-                "NBPhoneNumberUtilTest.m",
-                "NBShortNumberInfoTest.m"
+            ],
+            linkerSettings: [
+                .linkedFramework("CoreTelephony", .when(platforms: [.iOS, .macOS, .macCatalyst])),
             ]
         )
     ]
