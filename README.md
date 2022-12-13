@@ -27,41 +27,10 @@ Metadata in this library was generated from that. so, you should change it first
 
 ## Install
 
-#### Using [CocoaPods](http://cocoapods.org/?q=libPhoneNumber-iOS)
-```
-source 'https://github.com/CocoaPods/Specs.git'
-pod 'libPhoneNumber-iOS', '~> 0.8'
-```
-##### Installing libPhoneNumber Geocoding Features
-```
-pod 'libPhoneNumberGeocoding', :git => 'https://github.com/CocoaPods/Specs.git'
-```
+### [Swift Package Manager](https://www.swift.org/package-manager/)
 
-#### Using [Carthage](https://github.com/Carthage/Carthage)
-
- Carthage is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
-
- You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate libPhoneNumber into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "iziz/libPhoneNumber-iOS"
-```
-
-And set the **Embedded Content Contains Swift** to "Yes" in your build settings.
-
-#### Setting up manually
- Add source files to your projects from libPhoneNumber
-    - Add "CoreTelephony.framework"
-
-See sample test code from
-> [libPhoneNumber-iOS/libPhoneNumberTests/ ... Test.m] (https://github.com/iziz/libPhoneNumber-iOS/tree/master/libPhoneNumberTests)
+Add Swift Package `https://github.com/monzo/libPhoneNumber-iOS`
+Exact version `1.0.3`
 
 ## Usage - **NBPhoneNumberUtil**
 ```obj-c
